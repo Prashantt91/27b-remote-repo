@@ -1,25 +1,33 @@
-# Program to check if a number is prime or not
+# Python 3 code to find sum
+# of elements in given array
 
-num = 29
 
-# To take input from the user
-#num = int(input("Enter a number: "))
+def _sum(arr):
 
-# define a flag variable
-flag = False
+	# initialize a variable
+	# to store the sum
+	# while iterating through
+	# the array later
+	sum = 0
 
-# prime numbers are greater than 1
-if num > 1:
-    # check for factors
-    for i in range(2, num):
-        if (num % i) == 0:
-            # if factor is found, set flag to True
-            flag = True
-            # break out of loop
-            break
+	# iterate through the array
+	# and add each element to the sum variable
+	# one at a time
+	for i in arr:
+		sum = sum + i
 
-# check if flag is True
-if flag:
-    print(num, "is not a prime number")
-else:
-    print(num, "is a prime number and all")
+	return(sum)
+
+
+# driver function
+arr = []
+# input values to list
+arr = [12, 3, 4, 15]
+
+# calculating length of array
+n = len(arr)
+
+ans = _sum(arr)
+
+# display sum
+print('Sum of the array is ', ans)
